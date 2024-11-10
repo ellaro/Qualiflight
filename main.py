@@ -1,5 +1,5 @@
 from datetime import datetime
-from consts import AIRPORT_LENGTH, WIND_SUFFIX, WRITTEN_SUFFIX, DATE_DURATION_LENGTH
+from consts import AIRPORT_LENGTH, WIND_SUFFIX, WRITTEN_SUFFIX, DATE_DURATION_LENGTH, DATE_HOUR, DATE_HOUR_MINUTE
 
 
 class Solution(object):
@@ -63,7 +63,7 @@ class Solution(object):
         day = str(int(time[:2]))
         hour = str(int(time[2:]))
         date = day + "-" + str(datetime.now().month) + "-" + str(datetime.now().year) + " " + hour
-        dt_object = datetime.strptime(date, "%d-%m-%Y %H")
+        dt_object = datetime.strptime(date, DATE_HOUR)
         return dt_object.timestamp()
 
     @staticmethod
@@ -72,7 +72,7 @@ class Solution(object):
         hour = str(int(time[2:4]))
         minute = str(int(time[4:6]))
         date = day + "-" + str(datetime.now().month) + "-" + str(datetime.now().year) + " " + hour + "-" + minute
-        dt_object = datetime.strptime(date, "%d-%m-%Y %H-%M")
+        dt_object = datetime.strptime(date, DATE_HOUR_MINUTE)
         return dt_object.timestamp()
 
 
