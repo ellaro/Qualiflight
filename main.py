@@ -1,4 +1,5 @@
 from datetime import datetime
+from pymongo import MongoClient
 from consts import AIRPORT_LENGTH, WIND_SUFFIX, WRITTEN_SUFFIX, DATE_DURATION_LENGTH, DATE_HOUR, DATE_HOUR_MINUTE
 
 
@@ -6,6 +7,10 @@ class Solution(object):
     info = dict()
 
     def get_weather(self, string) -> dict:
+        client = MongoClient("mongodb://localhost:27017/")
+        db = client["mydatabase"]
+        collection = db["mycollection"]
+
         split_list = string.split()
 
         if split_list[0] != 'TAF':
@@ -21,6 +26,9 @@ class Solution(object):
         self.extract_written_time(split_list[2], airport)
         self.extract_dates(split_list[3], airport)
         self.extract_wind_info(split_list[4], airport)
+
+        insert_result = collection.insert_one(self.info)
+        print(f"Inserted document: {insert_result.inserted_id}")
 
         return self.info
 
