@@ -8,8 +8,8 @@ class Solution(object):
 
     def get_weather(self, string) -> dict:
         client = MongoClient("mongodb://localhost:27017/")
-        db = client["mydatabase"]
-        collection = db["mycollection"]
+        db = client["General"]
+        collection = db["TAF"]
 
         split_list = string.split()
 
