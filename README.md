@@ -1,2 +1,3 @@
 # Qualiflight
-Backend for pilot preparation app
+Backend for pilot priflight
+The application calculates 
