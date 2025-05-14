@@ -54,12 +54,14 @@ It will:
 2.The extracted timestamps are based on the current year and month.
 
 ## 📁 Project Structure
-
+```bash
+נ
 qualiflight/
 ├── qualiflight.py        # Main script for extracting TAF data
 ├── consts.py             # Constants used for parsing the TAF message
 ├── requirements.txt      # Python dependencies
 └── README.md             # Project documentation
+```
 
 ## 🧪 Testing Ideas (Not Included) 
 Although this project doesn't include testing, here are ideas for expanding it:
