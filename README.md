@@ -60,3 +60,20 @@ qualiflight/
 ├── consts.py             # Constants used for parsing the TAF message
 ├── requirements.txt      # Python dependencies
 └── README.md             # Project documentation
+
+## 🧪 Testing Ideas (Not Included) 
+Although this project doesn't include testing, here are ideas for expanding it:
+
+   1. Verify if the extracted timestamps are correct based on the input TAF string
+
+   2. Ensure wind data (direction and power) is parsed correctly
+
+   3. Use pytest to test each parsing function with different TAF message inputs.
+
+## Author 👩‍💻
+
+Developed with ❤️ for fun, learning, and aviation data parsing.
+
+## 🏷 Tags 
+
+#python #taf #weatherparser #aviation #automation #data
